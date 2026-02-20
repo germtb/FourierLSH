@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+benchmark_results.json
+*.png
+data/
+target/
+*.so
+paper.tex

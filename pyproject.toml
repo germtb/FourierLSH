@@ -1,0 +1,24 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "fourierlsh"
+version = "0.1.0"
+description = "LSH via random sign flips + FFT"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "fourierlsh._native"
+python-source = "python"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
+bench = [
+    "faiss-cpu>=1.7.0",
+    "datasets>=3.0.0",
+]

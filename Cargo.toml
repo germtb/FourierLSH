@@ -1,0 +1,14 @@
+[package]
+name = "fourierlsh"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "_native"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.25"
+numpy = "0.25"
+rayon = "1.10"
+rustfft = "6.2"
